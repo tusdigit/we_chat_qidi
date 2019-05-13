@@ -1,0 +1,31 @@
+/* pages/offline/offline.wxss */
+/* 弹性盒 */
+
+.head {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.head-item {
+  display: flex;
+  flex: 1;
+  border: 1rpx solid #eee;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* cursor: pointer
+点击高亮 */
+
+.head-item text {
+  font-size: 15px;
+  margin-top: 13px;
+  flex: 1;
+}
+.head-item image {
+  width: 70px;
+  height: 50px;
+}

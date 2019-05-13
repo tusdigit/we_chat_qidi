@@ -1,0 +1,66 @@
+<!--pages/teacher/teacher.wxml-->
+<view class='head'>
+  <!-- <navigator url='/pages/next/next?type=private&name=隐私信息'> -->
+    <view class='head-item' bindtap="multipleTap" bindlongtap="longTap" bindtouchstart="touchStart" bindtouchend="touchEnd">
+      <image src='/images/teacher.jpg' mode='aspectFill'></image>
+      <view >
+        <view>
+          <text>教师姓名：</text>
+          <text>{{teacher_name}}</text>
+        </view>
+        <view>
+          <text>擅长领域：</text>
+          <text>{{teacher_skill}}</text>
+        </view>
+      </view>
+    </view>
+  <!-- </navigator> -->
+  <navigator url='/pages/next/next?type=experience&name=职业经历'>
+    <view class='head-item'>
+      <text>职业经历</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  </navigator>
+  <navigator url='/pages/next/next?type=awards&name=获得奖项'>
+    <view class='head-item'>
+      <text>获得奖项</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  </navigator>
+  <navigator url='/pages/next/next?type=contribution&name=突出贡献'>
+    <view class='head-item'>
+      <text>突出贡献</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  </navigator>
+  <navigator url='/pages/next/next?type=history&name=答疑历史'>
+    <view class='head-item'>
+      <text>答疑历史</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  </navigator>
+  <!-- <navigator url='/pages/next/next?type=summary&name=解答统计'> -->
+    <view class='head-item' data-index='1' catchtap='panel'>
+      <text>解答统计</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  <!-- </navigator> -->
+  <navigator url='/pages/on_off_line/on_off_line?type=offline&name=线下预约历史'>
+    <view id='hide_view' class='head-item' wx:if="{{showIndex == 1}}">
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+      <text>线下预约历史</text>
+    </view>
+  </navigator>
+  <navigator url='/pages/on_off_line/on_off_line?type=online&name=线上预约历史'>
+    <view id='hide_view'  class='head-item' wx:if="{{showIndex == 1}}">
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+      <text>线上预约历史</text>
+    </view>
+  </navigator>
+  <navigator url='/pages/next/next?type=feedback&name=反馈'>
+    <view class='head-item'>
+      <text>反馈</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+    </navigator>
+</view>

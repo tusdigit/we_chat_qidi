@@ -1,0 +1,47 @@
+<!--pages/teacher_msg/teacher_msg.wxml-->
+<text class='header'>这是教师的详细信息页面</text>
+<view class='help'>
+  <view class='help_item'>
+    <view class='title' data-index='1' catchtap='panel'>
+      <view class='title_1'>教师详细信息</view>
+      <!-- <view class='title_2'> -->
+        <!-- <image src="../../images/{{showIndex == 1 ? 'up':'down'}}.png"></image> -->
+      <!-- </view> -->
+    </view>
+    <view class='detail' wx:if="{{showIndex == 1}}">职业经历</view>
+    <view class='detail' wx:if="{{showIndex == 1}}">获得奖项</view>
+    <view class='detail' wx:if="{{showIndex == 1}}">突出贡献</view>
+  </view>
+  <view class='help_item'>
+    <view class='title' data-index='2' catchtap='panel'>
+      <view class='title_1'>教师空闲时间</view>
+      <!-- <view class='title_2'> -->
+        <!-- <image src="../../images/{{showIndex == 2 ? 'up':'down'}}.png"></image> -->
+      <!-- </view> -->
+    </view>
+    <view class='detail' wx:if="{{showIndex == 2}}">可预约人数</view>
+    <view class='detail' wx:if="{{showIndex == 2}}">学科，领域</view>
+    <view class='detail' wx:if="{{showIndex == 2}}">地点</view>
+    <view class='detail' wx:if="{{showIndex == 2}}">时间</view>
+    <view class='detail' wx:if="{{showIndex == 2}}">预约</view>
+  </view>
+  <view class='help_item'>
+    <view class='title' data-index='3' catchtap='panel'>
+      <view class='title_1'>学生评论</view>
+      <!-- <view class='title_2'> -->
+        <!-- <image src="../../images/{{showIndex == 3 ? 'up':'down'}}.png"></image> -->
+      <!-- </view> -->
+    </view>
+    <view class='detail' wx:if="{{showIndex == 3}}">线上</view>
+    <view class='detail' wx:if="{{showIndex == 3}}">线下</view>
+  </view>
+  <view class='help_item'>
+    <view class='title' data-index='4' catchtap='panel'>
+      <view class='title_1'>线上解答</view>
+      <!-- <view class='title_2'> -->
+        <!-- <image src="../../images/{{showIndex == 4 ? 'up':'down'}}.png"></image> -->
+      <!-- </view> -->
+    </view>
+    <view class='detail' wx:if="{{showIndex == 4}}">向老师发送申请</view>
+  </view>
+</view>

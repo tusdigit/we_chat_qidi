@@ -1,0 +1,42 @@
+<!--pages/offline/offline.wxml-->
+<view class='head'>
+  <!-- <navigator url='/pages/next/next?type=private&name=隐私信息'> -->
+    <view class='head-item' bindtap="multipleTap" bindlongtap="longTap" bindtouchstart="touchStart" bindtouchend="touchEnd">
+      <image src='/images/teacher.jpg' mode='aspectFill'></image>
+      <view>
+        <view>
+          <text>教师姓名：</text>
+          <text>{{teacher_name}}</text>
+        </view>
+        <view>
+          <text>擅长领域：</text>
+          <text>{{teacher_skill}}</text>
+        </view>
+      </view>
+    </view>
+  <!-- </navigator> -->
+  <navigator url='/pages/next/next?type=add_free_time&name=添加空闲时间'>
+    <view class='head-item'>
+      <text>添加空闲时间</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  </navigator>
+  <navigator url='/pages/next/next?type=delete_free_time&name=删除空闲时间'>
+    <view class='head-item'>
+      <text>删除空闲时间</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  </navigator>
+  <navigator url='/pages/next/next?type=edit_free_time&name=修改空闲时间'>
+    <view class='head-item'>
+      <text>修改空闲时间</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  </navigator>
+  <navigator url='/pages/next/next?type=check_order_time&name=查看预约时间'>
+    <view class='head-item'>
+      <text>查看预约时间</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  </navigator>
+  </view>

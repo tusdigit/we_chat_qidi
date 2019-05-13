@@ -1,0 +1,5 @@
+<!--pages/next/next.wxml-->
+<view>动态数据展示：</view>
+<view>从--{{type}}--页面得到的数据是--{{message}}</view>
+<view>//TO DO</view>
+<view>此页面包括职业经历，获得奖项，突出贡献，答疑历史四个页面，即，只用一个页面分别接收到四个页面的不同数据，再加载</view>

@@ -1,0 +1,5 @@
+<!--pages/private/private.wxml-->
+<text class='title'>这是教师的隐私信息页面</text>
+<view>工号：-----------</view>
+<view>联系电话：-----------</view>
+<view>密码：-----------</view>
