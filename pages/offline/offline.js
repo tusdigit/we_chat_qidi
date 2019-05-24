@@ -1,4 +1,6 @@
 // pages/offline/offline.js
+
+//点击，双击，长按的实现
 // 触摸开始时间
 touchStartTime: 0;
 // 触摸结束时间
@@ -7,22 +9,93 @@ touchEndTime: 0;
 lastTapTime: 0;
 // 单击事件点击后要触发的函数
 lastTapTimeoutFunc: null;
+
+
+//获取当前日期
+var timestamp = Date.parse(new Date());
+var date = new Date(timestamp);
+//获取年份  
+var Y = date.getFullYear();
+//获取月份  
+var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+//获取当日日期 
+var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+if(Y%4==0&&M==2){
+  if(D==28){
+    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
+    var DDD = 1;
+  }
+  else if(D==29){
+    var DD = 1;
+    var DDD = 2;
+  }
+  else{
+    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
+    var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
+  }
+}
+else if(Y%4!=0&&M==2){
+  if (D == 27) {
+    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
+    var DDD = 1;
+  }
+  else if (D == 28) {
+    var DD = 1;
+    var DDD = 2;
+  }
+  else {
+    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
+    var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
+  }
+}
+else if(M==1||3||5||7||8||10||12){
+  if (D == 30) {
+    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
+    var DDD = 1;
+  }
+  else if (D == 31) {
+    var DD = 1;
+    var DDD = 2;
+  }
+  else {
+    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
+    var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
+  }
+}
+else if(M==2||4||6||9||11){
+  if (D == 29) {
+    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
+    var DDD = 1;
+  }
+  else if (D == 30) {
+    var DD = 1;
+    var DDD = 2;
+  }
+  else {
+    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
+    var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
+  }
+}
+else{
+  var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
+  var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
+}
 Page({
 
 
   /// 按钮触摸开始触发的事件
-  touchStart: function (e) {
+  touchStart: function(e) {
     this.touchStartTime = e.timeStamp
   },
 
   /// 按钮触摸结束触发的事件
-  touchEnd: function (e) {
+  touchEnd: function(e) {
     this.touchEndTime = e.timeStamp
   },
 
 
   /// 长按
-  longTap: function (e) {
+  longTap: function(e) {
     console.log("long tap")
     wx.showModal({
       title: '提示',
@@ -32,7 +105,7 @@ Page({
   },
 
   /// 单击、双击
-  multipleTap: function (e) {
+  multipleTap: function(e) {
     var that = this
     // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
     if (that.touchEndTime - that.touchStartTime < 350) {
@@ -57,7 +130,7 @@ Page({
         // })
       } else {
         // 单击事件延时300毫秒执行，这和最初的浏览器的点击300ms延时有点像。
-        that.lastTapTimeoutFunc = setTimeout(function () {
+        that.lastTapTimeoutFunc = setTimeout(function() {
           wx.navigateTo({
             url: '/pages/teacher_msg/teacher_msg',
           })
@@ -73,10 +146,148 @@ Page({
   },
   /**
    * 页面的初始数据
+   * todo-优化
    */
   data: {
     teacher_name: "王老师",
-    teacher_skill: "高数"
+    teacher_skill: "高数",
+    date_1: Y+"-"+M+"-"+D,
+    date_2: Y+"-"+M+"-"+DD,
+    date_3: Y+"-"+M+"-"+DDD,
+    time_1: "12:01",
+    time_2: "12:01",
+    time_3: "12:01",
+    time_4: "12:01",
+    time_5: "12:01",
+    time_6: "12:01",
+    time_11: "12:01",
+    time_22: "12:01",
+    time_33: "12:01",
+    time_44: "12:01",
+    time_55: "12:01",
+    time_66: "12:01",
+    time_111: "12:01",
+    time_222: "12:01",
+    time_333: "12:01",
+    time_444: "12:01",
+    time_555: "12:01",
+    time_666: "12:01",
+  },
+
+  
+  //picker
+  // bindDateChange(e) {
+  //   console.log('picker发送选择改变，携带值为', e.detail.value)
+  //   var flag = e.currentTarget.dataset.flag
+  //   if (flag == 1) {
+  //     this.setData({
+  //       date_1: e.detail.value
+  //     })
+  //   }
+  //   else if (flag == 2) {
+  //     this.setData({
+  //       date_2: e.detail.value
+  //     })
+  //   }
+  //   else if (flag == 3) {
+  //     this.setData({
+  //       date_3: e.detail.value
+  //     })
+  //   }
+  // },
+  bindTimeChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    var flag = e.currentTarget.dataset.flag
+    if(flag==1){
+      this.setData({
+        time_1:e.detail.value
+      })
+    }
+    else if (flag == 2) {
+      this.setData({
+        time_2: e.detail.value
+      })
+    }
+    else if (flag == 3) {
+      this.setData({
+        time_3: e.detail.value
+      })
+    }
+    else if (flag == 4) {
+      this.setData({
+        time_4: e.detail.value
+      })
+    }
+    else if (flag == 5) {
+      this.setData({
+        time_5: e.detail.value
+      })
+    }
+    else if (flag == 6) {
+      this.setData({
+        time_6: e.detail.value
+      })
+    }
+    else if (flag == 11) {
+      this.setData({
+        time_11: e.detail.value
+      })
+    }
+    else if (flag == 22) {
+      this.setData({
+        time_22: e.detail.value
+      })
+    }
+    else if (flag == 33) {
+      this.setData({
+        time_33: e.detail.value
+      })
+    }
+    else if (flag == 44) {
+      this.setData({
+        time_44: e.detail.value
+      })
+    }
+    else if (flag == 55) {
+      this.setData({
+        time_55: e.detail.value
+      })
+    }
+    else if (flag == 66) {
+      this.setData({
+        time_66: e.detail.value
+      })
+    }
+    else if (flag == 111) {
+      this.setData({
+        time_111: e.detail.value
+      })
+    }
+    else if (flag == 222) {
+      this.setData({
+        time_222: e.detail.value
+      })
+    }
+    else if (flag == 333) {
+      this.setData({
+        time_333: e.detail.value
+      })
+    }
+    else if (flag == 444) {
+      this.setData({
+        time_444: e.detail.value
+      })
+    }
+    else if (flag == 555) {
+      this.setData({
+        time_555: e.detail.value
+      })
+    }
+    else if (flag == 666) {
+      this.setData({
+        time_666: e.detail.value
+      })
+    }
   },
 
   /**

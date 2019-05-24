@@ -1,12 +1,12 @@
 <!--pages/online/online.wxml-->
 <view class='head'>
   <!-- <navigator url='/pages/next/next?type=private&name=隐私信息'> -->
-  <view class='head-item' bindtap="multipleTap" bindlongtap="longTap" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <view class='head-item' bindtap="multipleTap" bindlongtap="longTap"bindtouchstart="touchStart" bindtouchend="touchEnd">
     <image src='/images/teacher.jpg' mode='aspectFill'></image>
     <view>
       <view>
         <text>教师姓名：</text>
-        <text>{{teacher_name}}</text>
+        <text>{{teacher_name}}(单击、双击、长按)</text>
       </view>
       <view>
         <text>擅长领域：</text>
@@ -19,7 +19,7 @@
     <view class='help'>
       <view class='help_item'>
         <view class='title'>
-          <view class='title_1'>学生姓名：{{stu_name}}</view>
+          <view class='title_1'>学生姓名：{{stu_name}}左滑、右滑</view>
         </view>
       </view>
       <view class='help_item'>

@@ -1,6 +1,9 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/feedback/feedback",
     "pages/teacher/teacher",
+    "pages/slide/slide",
     "pages/offline/offline",
     "pages/next/next",
     "pages/online/online",
@@ -23,9 +26,15 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/teacher/teacher",
-        "text": "教师个人",
-        "iconPath": "/images/1.jpg",
+        "pagePath": "pages/online/online",
+        "text": "线上消息",
+        "iconPath": "/images/3.jpg",
+        "selectedIconPath": "/images/3.jpg"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "/images/3.jpg",
         "selectedIconPath": "/images/1.jpg"
       },
       {
@@ -33,12 +42,6 @@
         "text": "线下解答",
         "iconPath": "/images/2.jpg",
         "selectedIconPath": "/images/2.jpg"
-      },
-      {
-        "pagePath": "pages/online/online",
-        "text": "线上消息",
-        "iconPath": "/images/3.jpg",
-        "selectedIconPath": "/images/3.jpg"
       }
     ]
   },

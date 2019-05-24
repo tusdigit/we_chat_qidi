@@ -1,0 +1,45 @@
+<!--pages/slide/slide.wxml-->
+<view class="page">
+    <!-- 侧边栏内容 -->
+    <view class="page-slidebar">
+        <view class="page-content">
+            <view class="wc">
+                <text>菜单</text>
+            </view>
+            <view class="wc">
+                <text>需回复</text>
+            </view>
+            <view class="wc">
+                <text>已预约</text>
+            </view>
+            <view class="wc">
+                <text>未预约</text>
+            </view>
+        </view>
+    </view>
+    
+    <!-- 主页内容 -->
+ 
+    <!-- （open ? 'c-state' : ''）三元运算符： -->
+    <!-- 1.默认情况下 open 为 false -->
+    <!-- 2.当点击左上角图标的时候或者屏幕向左滑动，open 变化 true -->
+    <!-- 3.当 open 为 true 时，会加上类名为 c-state 和 cover 的 css 样式 -->
+ 
+    <!-- bindtouchstart、 bindtouchmove、bindtouchend -->
+    <!-- 当手指触摸屏幕并滑动时，所触发的三个函数 -->
+    <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{open ? ['c-state','cover'] : ''}} ">
+        <image bindtap="tap_ch" src="/images/gxust.jpg"></image>
+        <view class='content'> 
+            <text>教师答疑系统</text>
+            <text>教师答疑系统</text>
+            <text>教师答疑系统</text>
+            <text>教师答疑系统</text>
+            <text>教师答疑系统</text>
+            <text>教师答疑系统</text>
+            <text>教师答疑系统</text>
+            <text>教师答疑系统</text>
+            <text>教师答疑系统</text>
+            <text>教师答疑系统</text>
+        </view>
+    </view>
+</view>

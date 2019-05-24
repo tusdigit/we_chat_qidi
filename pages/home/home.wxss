@@ -1,0 +1,19 @@
+/* pages/home/home.wxss */
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 400px;
+    height: 60px;
+    background-color: lightgrey;
+}
+ 
+.flex-item {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 41px;
+    margin: 10px;
+}
+.item{
+  height: 150px;
+  background-color: gray
+}

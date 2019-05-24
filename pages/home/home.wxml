@@ -1,0 +1,18 @@
+<!--pages/home/home.wxml-->
+<view class='flex-container'>
+  <button class='flex-item' bindtap='go_to_teacher'>前往老师页面</button>
+  <button class='flex-item'>这里放图片</button>
+  <button class='flex-item'>消息</button>
+</view>
+  <text>需要回复的消息：</text>
+<view class='item'>
+  <text>{{msg_to_be_reply}}</text>
+</view>
+  <text>已经预约成功的时间:</text>
+<view class='item'>
+  <text>{{appointments}}</text>
+</view>
+  <text>还未预约的时间:</text>
+<view class='item'>
+  <text>{{free_time}}</text>
+</view>

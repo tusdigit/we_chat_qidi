@@ -1,31 +1,123 @@
 <!--pages/on_off_line/on_off_line.wxml-->
 <view class='_title'>{{title}}</view>
-<view class='help'>
-  <view class='help_item'>
-    <view class='title' data-index='1' catchtap='panel'>
-      <!-- 此页面由线上线下共用（加载不同的数据） -->
-      <view class='title_1'>线下预约历史</view>
+<!-- 此页面由线上线下共用（加载不同的数据） -->
+<view style='border:1px solid #96c2f1;background:#eff7ff' bindtouchstart="_touchStart" bindtouchmove="_touchMove" bindtouchend="_touchEnd">
+  <view class='help'>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>学生姓名：{{stu_name}}</view>
+      </view>
     </view>
-    <view class='detail' wx:if="{{showIndex == 1}}">地点</view>
-    <view class='detail' wx:if="{{showIndex == 1}}">时间</view>
-    <view class='detail' wx:if="{{showIndex == 1}}">学科领域</view>
-    <view class='detail' wx:if="{{showIndex == 1}}">人数</view>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>预约时间：{{order_time}}</view>
+      </view>
+    </view>
+    <view class='help_item'>
+      <view class='title' data-index='1' catchtap='panel'>
+        <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 1}}">{{question_detail}}</view>
+    </view>
   </view>
-  <view class='help_item'>
-    <view class='title' data-index='2' catchtap='panel'>
-      <view class='title_1'>获得评价</view>
+</view>
+<view style='border:1px solid #96c2f1;background:#eff7ff' bindtouchstart="_touchStart" bindtouchmove="_touchMove" bindtouchend="_touchEnd">
+  <view class='help'>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>学生姓名：{{stu_name}}</view>
+      </view>
     </view>
-    <view class='detail' wx:if="{{showIndex == 2}}">匿名</view>
-    <view class='detail' wx:if="{{showIndex == 2}}">不匿名</view>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>预约时间：{{order_time}}</view>
+      </view>
+    </view>
+    <view class='help_item'>
+      <view class='title' data-index='2' catchtap='panel'>
+        <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 2}}">{{question_detail}}</view>
+    </view>
   </view>
-  <view class='help_item'>
-    <view class='title' data-index='3' catchtap='panel'>
-      <view class='title_1'>预约状态</view>
-      <!-- <view class='title_2'> -->
-      <!-- <image src="../../images/{{showIndex == 3 ? 'up':'down'}}.png"></image> -->
-      <!-- </view> -->
+</view>
+<view style='border:1px solid #96c2f1;background:#eff7ff' bindtouchstart="_touchStart" bindtouchmove="_touchMove" bindtouchend="_touchEnd">
+  <view class='help'>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>学生姓名：{{stu_name}}</view>
+      </view>
     </view>
-    <view class='detail' wx:if="{{showIndex == 3}}">正在进行</view>
-    <view class='detail' wx:if="{{showIndex == 3}}">已经结束</view>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>预约时间：{{order_time}}</view>
+      </view>
+    </view>
+    <view class='help_item'>
+      <view class='title' data-index='3' catchtap='panel'>
+        <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 3}}">{{question_detail}}</view>
+    </view>
+  </view>
+</view>
+<view style='border:1px solid #96c2f1;background:#eff7ff' bindtouchstart="_touchStart" bindtouchmove="_touchMove" bindtouchend="_touchEnd">
+  <view class='help'>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>学生姓名：{{stu_name}}</view>
+      </view>
+    </view>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>预约时间：{{order_time}}</view>
+      </view>
+    </view>
+    <view class='help_item'>
+      <view class='title' data-index='4' catchtap='panel'>
+        <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 4}}">{{question_detail}}</view>
+    </view>
+  </view>
+</view>
+<view style='border:1px solid #96c2f1;background:#eff7ff' bindtouchstart="_touchStart" bindtouchmove="_touchMove" bindtouchend="_touchEnd">
+  <view class='help'>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>学生姓名：{{stu_name}}</view>
+      </view>
+    </view>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>预约时间：{{order_time}}</view>
+      </view>
+    </view>
+    <view class='help_item'>
+      <view class='title' data-index='5' catchtap='panel'>
+        <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 5}}">{{question_detail}}</view>
+    </view>
+  </view>
+</view>
+<view style='border:1px solid #96c2f1;background:#eff7ff' bindtouchstart="_touchStart" bindtouchmove="_touchMove" bindtouchend="_touchEnd">
+  <view class='help'>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>学生姓名：{{stu_name}}</view>
+      </view>
+    </view>
+    <view class='help_item'>
+      <view class='title'>
+        <view class='title_1'>预约时间：{{order_time}}</view>
+      </view>
+    </view>
+    <view class='help_item'>
+      <view class='title' data-index='6' catchtap='panel'>
+        <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 6}}">{{question_detail}}</view>
+    </view>
   </view>
 </view>

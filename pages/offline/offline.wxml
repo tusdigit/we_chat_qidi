@@ -1,42 +1,230 @@
 <!--pages/offline/offline.wxml-->
 <view class='head'>
   <!-- <navigator url='/pages/next/next?type=private&name=隐私信息'> -->
-    <view class='head-item' bindtap="multipleTap" bindlongtap="longTap" bindtouchstart="touchStart" bindtouchend="touchEnd">
-      <image src='/images/teacher.jpg' mode='aspectFill'></image>
+  <view class='head-item' bindtap="multipleTap" bindlongtap="longTap" bindtouchstart="touchStart" bindtouchend="touchEnd">
+    <image src='/images/teacher.jpg' mode='aspectFill'></image>
+    <view>
       <view>
-        <view>
-          <text>教师姓名：</text>
-          <text>{{teacher_name}}</text>
-        </view>
-        <view>
-          <text>擅长领域：</text>
-          <text>{{teacher_skill}}</text>
-        </view>
+        <text>教师姓名：</text>
+        <text>{{teacher_name}}(单击、双击、长按)</text>
+      </view>
+      <view>
+        <text>擅长领域：</text>
+        <text>{{teacher_skill}}</text>
       </view>
     </view>
-  <!-- </navigator> -->
-  <navigator url='/pages/next/next?type=add_free_time&name=添加空闲时间'>
-    <view class='head-item'>
-      <text>添加空闲时间</text>
-      <image src='/images/arrow.jpg' mode='aspectFill'></image>
-    </view>
-  </navigator>
-  <navigator url='/pages/next/next?type=delete_free_time&name=删除空闲时间'>
-    <view class='head-item'>
-      <text>删除空闲时间</text>
-      <image src='/images/arrow.jpg' mode='aspectFill'></image>
-    </view>
-  </navigator>
-  <navigator url='/pages/next/next?type=edit_free_time&name=修改空闲时间'>
-    <view class='head-item'>
-      <text>修改空闲时间</text>
-      <image src='/images/arrow.jpg' mode='aspectFill'></image>
-    </view>
-  </navigator>
-  <navigator url='/pages/next/next?type=check_order_time&name=查看预约时间'>
-    <view class='head-item'>
-      <text>查看预约时间</text>
-      <image src='/images/arrow.jpg' mode='aspectFill'></image>
-    </view>
-  </navigator>
   </view>
+</view>
+<!-- </navigator> -->
+
+<view style='border:1px solid #96c2f1;background:#eff7ff'>
+    <view class="picker">
+      {{date_1}}(今天)
+    </view>
+</view>
+<!-- <view style='border:1px solid #96c2f1;background:#eff7ff'>
+  <picker data-flag="1" mode="date" value="{{date}}" start="2019-05-14" end="2030-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      {{date_1}}
+    </view>
+  </picker>
+</view> -->
+
+<view style='border:1px solid #96c2f1;background:#eff7ff' class='layout_horizontal'>
+
+  <view style="flex:1">
+    <view>
+      <picker data-flag="1" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_1}}
+        </view>
+      </picker>
+    </view>
+    至
+    <view>
+      <picker data-flag="2" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_2}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view style="flex:1">
+    <view>
+      <picker data-flag="3" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_3}}
+        </view>
+      </picker>
+    </view>
+    至
+    <view>
+      <picker data-flag="4" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_4}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view style="flex:1">
+    <view>
+      <picker data-flag="5" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_5}}
+        </view>
+      </picker>
+    </view>
+    至
+    <view>
+      <picker data-flag="6" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_6}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+
+
+<view style='border:1px solid #96c2f1;background:#eff7ff'>
+    <view class="picker">
+      {{date_2}}(明天)
+    </view>
+</view>
+<!-- <view style='border:1px solid #96c2f1;background:#eff7ff'>
+  <picker data-flag="2" mode="date" value="{{date}}" start="2019-05-14" end="2030-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      {{date_2}}
+    </view>
+  </picker>
+</view> -->
+
+<view style='border:1px solid #96c2f1;background:#eff7ff' class='layout_horizontal'>
+
+  <view style="flex:1">
+    <view>
+      <picker data-flag="11" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_11}}
+        </view>
+      </picker>
+    </view>
+    至
+    <view>
+      <picker data-flag="22" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_22}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view style="flex:1">
+    <view>
+      <picker data-flag="33" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_33}}
+        </view>
+      </picker>
+    </view>
+    至
+    <view>
+      <picker data-flag="44" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_44}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view style="flex:1">
+    <view>
+      <picker data-flag="55" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_55}}
+        </view>
+      </picker>
+    </view>
+    至
+    <view>
+      <picker data-flag="66" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_66}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+
+
+<view style='border:1px solid #96c2f1;background:#eff7ff'>
+    <view class="picker">
+      {{date_3}}(后天)
+    </view>
+</view>
+<!-- <view style='border:1px solid #96c2f1;background:#eff7ff'>
+  <picker data-flag="3" mode="date" value="{{date}}" start="2019-05-14" end="2030-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      {{date_3}}
+    </view>
+  </picker>
+</view> -->
+
+<view style='border:1px solid #96c2f1;background:#eff7ff' class='layout_horizontal'>
+
+  <view style="flex:1">
+    <view>
+      <picker data-flag="111" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_111}}
+        </view>
+      </picker>
+    </view>
+    至
+    <view>
+      <picker data-flag="222" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_222}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view style="flex:1">
+    <view>
+      <picker data-flag="333" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_333}}
+        </view>
+      </picker>
+    </view>
+    至
+    <view>
+      <picker data-flag="444" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_444}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view style="flex:1">
+    <view>
+      <picker data-flag="555" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_555}}
+        </view>
+      </picker>
+    </view>
+    至
+    <view>
+      <picker data-flag="666" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view class="picker">
+          {{time_666}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
