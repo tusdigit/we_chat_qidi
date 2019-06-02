@@ -1,13 +1,13 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/feedback/feedback",
     "pages/teacher/teacher",
+    "pages/teacher_msg/teacher_msg",
+    "pages/feedback/feedback",
     "pages/slide/slide",
     "pages/offline/offline",
     "pages/next/next",
     "pages/online/online",
-    "pages/teacher_msg/teacher_msg",
     "pages/private/private",
     "pages/on_off_line/on_off_line",
     "pages/online_question_yes/online_question_yes",

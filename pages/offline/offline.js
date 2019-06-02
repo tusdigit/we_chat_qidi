@@ -20,65 +20,81 @@ var Y = date.getFullYear();
 var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
 //获取当日日期 
 var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
-if(Y%4==0&&M==2){
-  if(D==28){
-    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
-    var DDD = 1;
+var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+if (Y % 4 == 0 && M == 2) {
+  if (D == 28) {
+    DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
+    DDD = 1;
+    console.log("1")
+
+  } else if (D == 29) {
+    DD = 1;
+    DDD = 2;
+    console.log("2")
+
+  } else {
+    DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
+    DDD = (date.getDate() + 2) < 10 ? '0' + (date.getDate() + 2) : date.getDate() + 2;
+    console.log("3")
+
   }
-  else if(D==29){
-    var DD = 1;
-    var DDD = 2;
-  }
-  else{
-    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
-    var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
-  }
-}
-else if(Y%4!=0&&M==2){
+} else if (Y % 4 != 0 && M == 2) {
   if (D == 27) {
-    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
-    var DDD = 1;
+    DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
+    DDD = 1;
+    console.log("4")
+
+  } else if (D == 28) {
+    DD = 1;
+    DDD = 2;
+    console.log("5")
+
+  } else {
+    DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
+    DDD = (date.getDate() + 2) < 10 ? '0' + (date.getDate() + 2) : date.getDate() + 2;
+    console.log("6")
+
   }
-  else if (D == 28) {
-    var DD = 1;
-    var DDD = 2;
-  }
-  else {
-    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
-    var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
-  }
-}
-else if(M==1||3||5||7||8||10||12){
+} else if (M == 1 || M == 3 || M == 5 || M == 7 || M == 8 || M == 10 || M == 12) {
   if (D == 30) {
-    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
-    var DDD = 1;
+    DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
+    DDD = 1;
+    console.log("7")
+
+  } else if (D == 31) {
+    DD = 1;
+    DDD = 2;
+    console.log("8")
+
+  } else {
+    DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
+    DDD = (date.getDate() + 2) < 10 ? '0' + (date.getDate() + 2) : date.getDate() + 2;
+    console.log("9")
+
   }
-  else if (D == 31) {
-    var DD = 1;
-    var DDD = 2;
-  }
-  else {
-    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
-    var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
-  }
-}
-else if(M==2||4||6||9||11){
+} else if (M == 2 || M == 4 || M == 6 || M == 9 || M == 11) {
   if (D == 29) {
-    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
-    var DDD = 1;
+    DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
+    DDD = 1;
+    console.log("10")
+
+  } else if (D == 30) {
+    DD = 1;
+    DDD = 2;
+    console.log("11")
+
+  } else {
+    DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
+    DDD = (date.getDate() + 2) < 10 ? '0' + (date.getDate() + 2) : date.getDate() + 2;
+    console.log("12" + D + DD + DDD)
+
   }
-  else if (D == 30) {
-    var DD = 1;
-    var DDD = 2;
-  }
-  else {
-    var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
-    var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
-  }
-}
-else{
-  var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 1;
-  var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + 2;
+} else {
+  DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
+  DDD = (date.getDate() + 2) < 10 ? '0' + (date.getDate() + 2) : date.getDate() + 2;
+  console.log("13")
+
 }
 Page({
 
@@ -99,7 +115,7 @@ Page({
     console.log("long tap")
     wx.showModal({
       title: '提示',
-      content: '修改教师信息',
+      content: '修改教师信息' + M,
       showCancel: false
     })
   },
@@ -151,9 +167,9 @@ Page({
   data: {
     teacher_name: "王老师",
     teacher_skill: "高数",
-    date_1: Y+"-"+M+"-"+D,
-    date_2: Y+"-"+M+"-"+DD,
-    date_3: Y+"-"+M+"-"+DDD,
+    date_1: Y + "-" + M + "-" + D,
+    date_2: Y + "-" + M + "-" + DD,
+    date_3: Y + "-" + M + "-" + DDD,
     time_1: "12:01",
     time_2: "12:01",
     time_3: "12:01",
@@ -174,7 +190,7 @@ Page({
     time_666: "12:01",
   },
 
-  
+
   //picker
   // bindDateChange(e) {
   //   console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -198,92 +214,75 @@ Page({
   bindTimeChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     var flag = e.currentTarget.dataset.flag
-    if(flag==1){
+    if (flag == 1) {
       this.setData({
-        time_1:e.detail.value
+        time_1: e.detail.value
       })
-    }
-    else if (flag == 2) {
+    } else if (flag == 2) {
       this.setData({
         time_2: e.detail.value
       })
-    }
-    else if (flag == 3) {
+    } else if (flag == 3) {
       this.setData({
         time_3: e.detail.value
       })
-    }
-    else if (flag == 4) {
+    } else if (flag == 4) {
       this.setData({
         time_4: e.detail.value
       })
-    }
-    else if (flag == 5) {
+    } else if (flag == 5) {
       this.setData({
         time_5: e.detail.value
       })
-    }
-    else if (flag == 6) {
+    } else if (flag == 6) {
       this.setData({
         time_6: e.detail.value
       })
-    }
-    else if (flag == 11) {
+    } else if (flag == 11) {
       this.setData({
         time_11: e.detail.value
       })
-    }
-    else if (flag == 22) {
+    } else if (flag == 22) {
       this.setData({
         time_22: e.detail.value
       })
-    }
-    else if (flag == 33) {
+    } else if (flag == 33) {
       this.setData({
         time_33: e.detail.value
       })
-    }
-    else if (flag == 44) {
+    } else if (flag == 44) {
       this.setData({
         time_44: e.detail.value
       })
-    }
-    else if (flag == 55) {
+    } else if (flag == 55) {
       this.setData({
         time_55: e.detail.value
       })
-    }
-    else if (flag == 66) {
+    } else if (flag == 66) {
       this.setData({
         time_66: e.detail.value
       })
-    }
-    else if (flag == 111) {
+    } else if (flag == 111) {
       this.setData({
         time_111: e.detail.value
       })
-    }
-    else if (flag == 222) {
+    } else if (flag == 222) {
       this.setData({
         time_222: e.detail.value
       })
-    }
-    else if (flag == 333) {
+    } else if (flag == 333) {
       this.setData({
         time_333: e.detail.value
       })
-    }
-    else if (flag == 444) {
+    } else if (flag == 444) {
       this.setData({
         time_444: e.detail.value
       })
-    }
-    else if (flag == 555) {
+    } else if (flag == 555) {
       this.setData({
         time_555: e.detail.value
       })
-    }
-    else if (flag == 666) {
+    } else if (flag == 666) {
       this.setData({
         time_666: e.detail.value
       })
