@@ -29,6 +29,7 @@ page{
 .inputView {
   background-color: #fff;
   line-height: 44px;
+  width: 350px
 }
 /*输入框*/
 .nameImage, .keyImage {
@@ -48,7 +49,7 @@ page{
   text-align: right;
   margin-right: 22px;
   margin-top: 11px;
-  color: #cccccc;
+  color: #000000;
   font-size: 14px
 }
  

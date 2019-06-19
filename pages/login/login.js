@@ -41,16 +41,16 @@ Page({
           })
           var app = getApp()
           app.globalData.id = that.data.login_id
-          wx.reLaunch({
-            url: '/pages/home/home'
-          })
+          // wx.reLaunch({
+          //   url: '/pages/home/home'
+          // })
         }
       },
       fail: function (res) {
         console.log(".....fail.....");
-        // wx.reLaunch({
-        //   url: '/pages/home/home'
-        // })
+        wx.reLaunch({
+          url: '/pages/home/home'
+        })
       }
     })
     if (this.data.login_id.length == 0 || this.data.password.length == 0) {
