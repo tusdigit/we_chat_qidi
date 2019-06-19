@@ -1,20 +1,26 @@
 <!--pages/online/online.wxml-->
-<view class='head'>
-  <!-- <navigator url='/pages/next/next?type=private&name=隐私信息'> -->
-  <view class='head-item' bindtap="multipleTap" bindlongtap="longTap"bindtouchstart="touchStart" bindtouchend="touchEnd">
-    <image src='/images/teacher.jpg' mode='aspectFill'></image>
-    <view>
-      <view>
-        <text>教师姓名：</text>
-        <text>{{teacher_name}}(单击、双击、长按)</text>
+  <view class='space-between'>
+    <view class='flex-item' bindtap='go_to_teacher'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <image src='/images/teacher.jpg' style="width: 50px; height: 50px; display: block" />
+        </view>
+        <view class="weui-cell__bd">
+          <view>高老师</view>
+          <view style="font-size: 13px;color: #888888;">高数B1</view>
+        </view>
       </view>
-      <view>
-        <text>擅长领域：</text>
-        <text>{{teacher_skill}}</text>
+    </view>
+    <view class='flex-item' bindtap='show_news'>
+      <view class="weui-cell">
+        <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <image src='/images/3.jpg' style="width: 50px; height: 50px; display: block" />
+          <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">8</view>
+        </view>
       </view>
     </view>
   </view>
-  <!-- </navigator> -->
+<view class='head'>
   <view style='border:1px solid #96c2f1;background:#eff7ff' bindtouchstart="_touchStart" bindtouchmove="_touchMove" bindtouchend="_touchEnd">
     <view class='help'>
       <view class='help_item'>

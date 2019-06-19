@@ -1,18 +1,37 @@
 <!--pages/home/home.wxml-->
-<view class='flex-container'>
-  <button class='flex-item' bindtap='go_to_teacher'>前往老师页面</button>
-  <button class='flex-item'>这里放图片</button>
-  <button class='flex-item'>消息</button>
+<view class='space-between'>
+  <view class='flex-item' bindtap='go_to_teacher'>
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+        <image src='/images/teacher.jpg' style="width: 50px; height: 50px; display: block" />
+      </view>
+      <view class="weui-cell__bd">
+        <view>高老师</view>
+        <view style="font-size: 13px;color: #888888;">高数B1</view>
+      </view>
+    </view>
+  </view>
+  <view class='flex-item' bindtap='show_news'>
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+        <image src='/images/3.jpg' style="width: 50px; height: 50px; display: block" />
+        <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">8</view>
+      </view>
+    </view>
+  </view>
 </view>
-  <text>需要回复的消息：</text>
-<view class='item'>
-  <text>{{msg_to_be_reply}}</text>
-</view>
+
+<view class='head'>
+  <text class='text'>需要回复的消息：</text>
+  <view class='item'>
+    <text>{{msg_to_be_reply}}</text>
+  </view>
   <text>已经预约成功的时间:</text>
-<view class='item'>
-  <text>{{appointments}}</text>
-</view>
+  <view class='item'>
+    <text>{{appointments}}</text>
+  </view>
   <text>还未预约的时间:</text>
-<view class='item'>
-  <text>{{free_time}}</text>
+  <view class='item'>
+    <text>{{free_time}}</text>
+  </view>
 </view>

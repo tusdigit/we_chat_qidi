@@ -138,6 +138,19 @@ Page({
     time = 0;
   },
 
+
+  go_to_teacher: function () {
+    wx.navigateTo({
+      url: '/pages/teacher/teacher',
+    })
+  },
+  show_news: function () {
+    wx.showToast({
+      title: '这里显示已处理和未处理的消息',
+      icon: 'none',
+      duration: 2000
+    })
+  },
   /**
    * 页面的初始数据
    */

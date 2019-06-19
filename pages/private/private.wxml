@@ -1,5 +1,29 @@
 <!--pages/private/private.wxml-->
 <text class='title'>这是教师的隐私信息页面</text>
-<view>工号：-----------</view>
-<view>联系电话：-----------</view>
-<view>密码：-----------</view>
+<!-- <view>工号：{{id}}</view>
+<view>联系电话：{{tel}}</view>
+<view>密码：{{password}}</view> -->
+<view class="weui-cells__title">账号</view>
+<view class="weui-cells  weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">{{id}}</view>
+    <view class="weui-cell__ft">
+      ~~教师工号</view>
+  </view>
+</view>
+<view class="weui-cells__title">电话</view>
+<view class="weui-cells  weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">{{tel}}</view>
+    <view class="weui-cell__ft">
+      ~~教师联系方式</view>
+  </view>
+</view>
+<view class="weui-cells__title">密码</view>
+<view class="weui-cells  weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">{{password}}</view>
+    <view class="weui-cell__ft">
+      ~~教师密码</view>
+  </view>
+</view>

@@ -1,47 +1,34 @@
 <!--pages/teacher_msg/teacher_msg.wxml-->
-<text class='header'>这是教师的详细信息页面</text>
-<view class='help'>
-  <view class='help_item'>
-    <view class='title' data-index='1' catchtap='panel'>
-      <view class='title_1'>教师详细信息</view>
-      <!-- <view class='title_2'> -->
-        <!-- <image src="../../images/{{showIndex == 1 ? 'up':'down'}}.png"></image> -->
-      <!-- </view> -->
+<text class='title'>这是教师的详细信息页面</text>
+<view class='head'>
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">参数</view>
+      <view class="th-2">内容</view>
     </view>
-    <view class='detail' wx:if="{{showIndex == 1}}">职业经历</view>
-    <view class='detail' wx:if="{{showIndex == 1}}">获得奖项</view>
-    <view class='detail' wx:if="{{showIndex == 1}}">突出贡献</view>
+    <block wx:for="{{listData}}" wx:key="{{code}}">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+        <view class="td-1" selectable="true">{{item.code}}</view>
+        <view class="td-2" selectable="true" scroll-y="false">
+          <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{item.text}}</text>
+        </view>
+        <!--view class="td">{{item.type}}</view-->
+      </view>
+      <view class="tr bg-g2" wx:else>
+        <view class="td-1" selectable="true">{{item.code}}</view>
+        <view class="td-2" selectable="true" scroll-y="true">
+          <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{item.text}}</text>
+        </view>
+      </view>
+    </block>
   </view>
-  <view class='help_item'>
-    <view class='title' data-index='2' catchtap='panel'>
-      <view class='title_1'>教师空闲时间</view>
-      <!-- <view class='title_2'> -->
-        <!-- <image src="../../images/{{showIndex == 2 ? 'up':'down'}}.png"></image> -->
-      <!-- </view> -->
+  <view class="page__bd page__bd_spacing">
+
+    <view class="weui-footer">
+      <view class="weui-footer__links">
+        <navigator url="" class="weui-footer__link">底部链接</navigator>
+      </view>
+      <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
     </view>
-    <view class='detail' wx:if="{{showIndex == 2}}">可预约人数</view>
-    <view class='detail' wx:if="{{showIndex == 2}}">学科，领域</view>
-    <view class='detail' wx:if="{{showIndex == 2}}">地点</view>
-    <view class='detail' wx:if="{{showIndex == 2}}">时间</view>
-    <view class='detail' wx:if="{{showIndex == 2}}">预约</view>
-  </view>
-  <view class='help_item'>
-    <view class='title' data-index='3' catchtap='panel'>
-      <view class='title_1'>学生评论</view>
-      <!-- <view class='title_2'> -->
-        <!-- <image src="../../images/{{showIndex == 3 ? 'up':'down'}}.png"></image> -->
-      <!-- </view> -->
-    </view>
-    <view class='detail' wx:if="{{showIndex == 3}}">线上</view>
-    <view class='detail' wx:if="{{showIndex == 3}}">线下</view>
-  </view>
-  <view class='help_item'>
-    <view class='title' data-index='4' catchtap='panel'>
-      <view class='title_1'>线上解答</view>
-      <!-- <view class='title_2'> -->
-        <!-- <image src="../../images/{{showIndex == 4 ? 'up':'down'}}.png"></image> -->
-      <!-- </view> -->
-    </view>
-    <view class='detail' wx:if="{{showIndex == 4}}">向老师发送申请</view>
   </view>
 </view>

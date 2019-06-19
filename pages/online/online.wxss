@@ -5,7 +5,7 @@
 .head {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
 }
 
 .head-item {
@@ -66,4 +66,15 @@
   font-size: 25rpx;
   line-height: 40rpx;
   text-indent: 2em;
+}
+.img {
+  width: 50px;
+  height: 50px;
+}
+/* 左右布局 */
+.space-between {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

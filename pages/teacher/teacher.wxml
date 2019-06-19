@@ -33,18 +33,18 @@
       <image src='/images/arrow.jpg' mode='aspectFill'></image>
     </view>
   </navigator>
-  <!-- <navigator url='/pages/next/next?type=history&name=答疑历史'>
-    <view class='head-item'>
-      <text>答疑历史</text>
-      <image src='/images/arrow.jpg' mode='aspectFill'></image>
-    </view>
-  </navigator> -->
   <!-- <navigator url='/pages/next/next?type=summary&name=解答统计'> -->
   <view class='head-item' data-index='1' catchtap='panel'>
     <text>解答统计</text>
     <image src='/images/arrow.jpg' mode='aspectFill'></image>
   </view>
   <!-- </navigator> -->
+  <navigator url='/pages/next/next?type=comments&name=评论'>
+    <view class='head-item'>
+      <text>评论</text>
+      <image src='/images/arrow.jpg' mode='aspectFill'></image>
+    </view>
+  </navigator>
   <navigator url='/pages/on_off_line/on_off_line?type=offline&name=线下预约历史'>
     <view id='hide_view' class='head-item' wx:if="{{showIndex == 1}}">
       <image src='/images/arrow.jpg' mode='aspectFill'></image>

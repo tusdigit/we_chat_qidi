@@ -1,19 +1,27 @@
 /* pages/home/home.wxss */
-.flex-container {
-    display: -webkit-flex;
-    display: flex;
-    width: 400px;
-    height: 60px;
-    background-color: lightgrey;
+.head {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
- 
-.flex-item {
-    background-color: cornflowerblue;
-    width: 100px;
-    height: 41px;
-    margin: 10px;
+
+.text{
+  background-color: rgb(224, 207, 207)
 }
-.item{
+
+.img {
+  width: 50px;
+  height: 50px;
+}
+/* 左右布局 */
+.space-between {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
   height: 150px;
-  background-color: gray
+  background-color: gray;
 }
