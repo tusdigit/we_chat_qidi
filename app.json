@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/home",
     "pages/login/login",
+    "pages/home/home",
     "pages/teacher/teacher",
     "pages/teacher_msg/teacher_msg",
     "pages/feedback/feedback",
