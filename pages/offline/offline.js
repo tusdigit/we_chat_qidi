@@ -16,12 +16,19 @@ var timestamp = Date.parse(new Date());
 var date = new Date(timestamp);
 //获取年份  
 var Y = date.getFullYear();
+var YY = date.getFullYear();
+var YYY = date.getFullYear();
 //获取月份  
 var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+var MMM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
 //获取当日日期 
 var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+//获取明天日期
 var DD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+//获取后天日期
 var DDD = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+//判断是不是闰年的二月份
 if (Y % 4 == 0 && M == 2) {
   if (D == 28) {
     DD = (date.getDate() + 1) < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1;
@@ -95,6 +102,14 @@ if (Y % 4 == 0 && M == 2) {
   DDD = (date.getDate() + 2) < 10 ? '0' + (date.getDate() + 2) : date.getDate() + 2;
   console.log("13")
 
+}
+if(DD<D){
+  MM = (date.getMonth() + 2) < 10 ? '0' + (date.getMonth() + 2) : date.getMonth() + 2;
+  MMM = (date.getMonth() + 2) < 10 ? '0' + (date.getMonth() + 2) : date.getMonth() + 2;
+  console.log("14")
+}
+else if(DDD<DD){
+  MMM = (date.getMonth() + 2) < 10 ? '0' + (date.getMonth() + 2) : date.getMonth() + 2;
 }
 Page({
 
@@ -181,8 +196,8 @@ Page({
     teacher_name: "王老师",
     teacher_skill: "高数",
     date_1: Y + "-" + M + "-" + D,
-    date_2: Y + "-" + M + "-" + DD,
-    date_3: Y + "-" + M + "-" + DDD,
+    date_2: Y + "-" + MM + "-" + DD,
+    date_3: Y + "-" + MMM + "-" + DDD,
     time_1: "12:01",
     time_2: "12:01",
     time_3: "12:01",

@@ -9,6 +9,14 @@ Page({
   },
 
   /**
+   * 获取内容
+   */
+
+  getDataBindTap: function (e) {
+    var result = e.detail.value;
+    console.log(result)
+  },
+  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
