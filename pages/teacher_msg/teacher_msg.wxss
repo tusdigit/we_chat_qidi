@@ -56,6 +56,7 @@
 
 .bg-g {
   background: #e6f3f9;
+  border-bottom: 2px solid #afb4db;
 }
 
 .bg-g2 {

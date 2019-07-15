@@ -23,7 +23,7 @@ Page({
 
 
   /// 长按
-  longTap: function (e) {
+  longTap: function(e) {
     console.log("long tap")
     this.setData({
       showModal: true
@@ -31,7 +31,7 @@ Page({
   },
 
   /// 单击、双击
-  multipleTap: function (e) {
+  multipleTap: function(e) {
     var that = this
     // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
     if (that.touchEndTime - that.touchStartTime < 350) {
@@ -56,7 +56,7 @@ Page({
         // })
       } else {
         // 单击事件延时300毫秒执行，这和最初的浏览器的点击300ms延时有点像。
-        that.lastTapTimeoutFunc = setTimeout(function () {
+        that.lastTapTimeoutFunc = setTimeout(function() {
           wx.navigateTo({
             url: '/pages/teacher_msg/teacher_msg',
           })
@@ -75,6 +75,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    age: "00",
+    department: "00",
+    id: "00",
+    sex: "00",
+    subject: "00",
+    unit: "00",
+    phoneNumber: "00",
     teacher_name: "王老师",
     teacher_skill: "高数"
   },
@@ -86,14 +93,43 @@ Page({
   * 弹窗
    
   */
-
+  deptChange: function(e) {
+    this.setData({
+      department: e.detail.value
+    })
+  },
+  unitChange: function(e) {
+    this.setData({
+      unit: e.detail.value
+    })
+  },
+  subChange: function(e) {
+    this.setData({
+      subject: e.detail.value
+    })
+  },
+  sexChange: function(e) {
+    this.setData({
+      sex: e.detail.value
+    })
+  },
+  ageChange: function(e) {
+    this.setData({
+      age: e.detail.value
+    })
+  },
+  telChange: function(e) {
+    this.setData({
+      phoneNumber: e.detail.value
+    })
+  },
   /**
    
   * 弹出框蒙层截断touchmove事件
    
   */
 
-  preventTouchMove: function () {
+  preventTouchMove: function() {
 
   },
 
@@ -103,7 +139,7 @@ Page({
    
   */
 
-  hideModal: function () {
+  hideModal: function() {
 
     this.setData({
 
@@ -119,7 +155,7 @@ Page({
    
   */
 
-  onCancel: function () {
+  onCancel: function() {
 
     this.hideModal();
 
@@ -131,7 +167,7 @@ Page({
    
   */
 
-  onConfirm: function () {
+  onConfirm: function() {
 
     wx.showToast({
 
@@ -142,13 +178,13 @@ Page({
       duration: 2000
 
     })
-
+    console.log(this.data.department + this.data.unit + this.data.subject + this.data.sex + this.data.age+this.data.phoneNumber)
     this.hideModal();
   },
   /**
-     * 折叠面板
-     */
-  panel: function (e) {
+   * 折叠面板
+   */
+  panel: function(e) {
     if (e.currentTarget.dataset.index != this.data.showIndex) {
       this.setData({
         showIndex: e.currentTarget.dataset.index

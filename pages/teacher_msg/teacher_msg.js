@@ -1,36 +1,16 @@
 // pages/teacher_msg/teacher_msg.js
-var idinfolist = [{
-    "code": "所属部门",
-    "text": '16级'
-  },
-  {
-    "code": "所属单位",
-    "text": '教师'
-  },
-  {
-    "code": "学科",
-    "text": '高数B1'
-  },
-  {
-    "code": "性别",
-    "text": '男'
-  },
-  {
-    "code": "年龄",
-    "text": '30'
-  }
-]
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    listData: idinfolist,
-    inputValue: '',
-    //用于显示输入语句
-    searchinput: '',
-    //用户输入的查询语句  
+    age:"00",
+    department:"00",
+    id:"00",
+    sex:"00",
+    subject:"00",
+    unit:"00",
   },
 
   /**

@@ -6,25 +6,51 @@
       <view class="th">参数</view>
       <view class="th-2">内容</view>
     </view>
-    <block wx:for="{{listData}}" wx:key="{{code}}">
-      <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
-        <view class="td-1" selectable="true"><text class='th-text'>{{item.code}}</text></view>
-        <view class="td-2" selectable="true" scroll-y="false">
-          <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{item.text}}</text>
-        </view>
+    <view class="tr bg-g">
+      <view class="td-1" selectable="true">
+        <text class='th-text'>所属部门</text>
       </view>
-      <view class="tr bg-g2" wx:else>
-        <view class="td-1" selectable="true"><text class='th-text'>{{item.code}}</text></view>
-        <view class="td-2" selectable="true" scroll-y="false">
-          <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{item.text}}</text>
-        </view>
+      <view class="td-2" selectable="true" scroll-y="false">
+        <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{department}}</text>
       </view>
-    </block>
-  </view>
-    <view class="weui-footer">
-      <view class="weui-footer__links">
-        <navigator url="" class="weui-footer__link">底部链接</navigator>
-      </view>
-      <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
     </view>
+    <view class="tr bg-g2">
+      <view class="td-1" selectable="true">
+        <text class='th-text'>所属单位</text>
+      </view>
+      <view class="td-2" selectable="true" scroll-y="false">
+        <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{unit}}</text>
+      </view>
+    </view>
+    <view class="tr bg-g">
+      <view class="td-1" selectable="true">
+        <text class='th-text'>学科</text>
+      </view>
+      <view class="td-2" selectable="true" scroll-y="false">
+        <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{subject}}</text>
+      </view>
+    </view>
+    <view class="tr bg-g2">
+      <view class="td-1" selectable="true">
+        <text class='th-text'>性别</text>
+      </view>
+      <view class="td-2" selectable="true" scroll-y="false">
+        <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{sex}}</text>
+      </view>
+    </view>
+    <view class="tr bg-g">
+      <view class="td-1" selectable="true">
+        <text class='th-text'>年龄</text>
+      </view>
+      <view class="td-2" selectable="true" scroll-y="false">
+        <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{age}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="weui-footer">
+    <view class="weui-footer__links">
+      <navigator url="https://github.com/javadoer?tab=repositories" class="weui-footer__link">底部链接</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
+  </view>
 </view>

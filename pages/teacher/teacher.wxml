@@ -12,35 +12,35 @@
 
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type='text' maxlength="10" bindinput="inputChange" class="input" placeholder="所属部门"></input>
+      <input placeholder-class="input-holder" type='text' maxlength="10" bindinput="deptChange" class="input" placeholder="所属部门"></input>
 
     </view>
 
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="inputChange" class="input" placeholder="所属单位"></input>
+      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="unitChange" class="input" placeholder="所属单位"></input>
 
     </view>
 
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="inputChange" class="input" placeholder="学科"></input>
+      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="subChange" class="input" placeholder="学科"></input>
 
     </view>
 
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="inputChange" class="input" placeholder="性别"></input>
+      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="sexChange" class="input" placeholder="性别"></input>
 
     </view>
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="年龄"></input>
+      <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="ageChange" class="input" placeholder="年龄"></input>
 
     </view>
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="电话"></input>
+      <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="telChange" class="input" placeholder="电话"></input>
 
     </view>
 
