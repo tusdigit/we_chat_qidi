@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    msg_items:"8",
+    teacher_name:"高老师",
+    teacher_skill:"高数B1",
     msg_to_be_reply: "老师，请问。。。。。。。。。。。。。",
     appointments: "2019/5/19/18/00",
     free_time: "2019/5/19/16/00"

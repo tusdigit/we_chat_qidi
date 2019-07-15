@@ -10,11 +10,11 @@ lastTapTime: 0;
 // 单击事件点击后要触发的函数
 lastTapTimeoutFunc: null;
 
-
+//todo,不需要算，只需要看后面的日期是否大于昨天
 //获取当前日期
 var timestamp = Date.parse(new Date());
 var date = new Date(timestamp);
-//获取年份  
+//获取年份,Y为第一个日期的年份，YY为第二个日期的年份，YYY为第三个日期的年份，以此类推  
 var Y = date.getFullYear();
 var YY = date.getFullYear();
 var YYY = date.getFullYear();
@@ -111,6 +111,14 @@ if(DD<D){
 else if(DDD<DD){
   MMM = (date.getMonth() + 2) < 10 ? '0' + (date.getMonth() + 2) : date.getMonth() + 2;
 }
+if(MM<M){
+  YY = (date.getMonth() + 2) < 10 ? '0' + (date.getMonth() + 2) : date.getMonth() + 2;
+  YYY = (date.getMonth() + 2) < 10 ? '0' + (date.getMonth() + 2) : date.getMonth() + 2;
+  console.log("14")
+}
+else if(MMM<MM){
+  YYY = (date.getMonth() + 2) < 10 ? '0' + (date.getMonth() + 2) : date.getMonth() + 2;
+}
 Page({
 
 
@@ -196,8 +204,8 @@ Page({
     teacher_name: "王老师",
     teacher_skill: "高数",
     date_1: Y + "-" + M + "-" + D,
-    date_2: Y + "-" + MM + "-" + DD,
-    date_3: Y + "-" + MMM + "-" + DDD,
+    date_2: YY + "-" + MM + "-" + DD,
+    date_3: YYY + "-" + MMM + "-" + DDD,
     time_1: "12:01",
     time_2: "12:01",
     time_3: "12:01",

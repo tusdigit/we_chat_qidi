@@ -6,8 +6,8 @@
         <image src='/images/teacher.jpg' style="width: 50px; height: 50px; display: block" />
       </view>
       <view class="weui-cell__bd">
-        <view>高老师</view>
-        <view style="font-size: 13px;color: #888888;">高数B1</view>
+        <view>{{teacher_name}}</view>
+        <view style="font-size: 13px;color: #888888;">{{teacher_skill}}</view>
       </view>
     </view>
   </view>
@@ -15,7 +15,7 @@
     <view class="weui-cell">
       <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
         <image src='/images/3.jpg' style="width: 50px; height: 50px; display: block" />
-        <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">8</view>
+        <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">{{msg_items}}</view>
       </view>
     </view>
   </view>

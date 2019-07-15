@@ -8,27 +8,23 @@
     </view>
     <block wx:for="{{listData}}" wx:key="{{code}}">
       <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
-        <view class="td-1" selectable="true">{{item.code}}</view>
+        <view class="td-1" selectable="true"><text class='th-text'>{{item.code}}</text></view>
         <view class="td-2" selectable="true" scroll-y="false">
           <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{item.text}}</text>
         </view>
-        <!--view class="td">{{item.type}}</view-->
       </view>
       <view class="tr bg-g2" wx:else>
-        <view class="td-1" selectable="true">{{item.code}}</view>
-        <view class="td-2" selectable="true" scroll-y="true">
+        <view class="td-1" selectable="true"><text class='th-text'>{{item.code}}</text></view>
+        <view class="td-2" selectable="true" scroll-y="false">
           <text class="th-text" style="overflow-y:auto;overflow-x:scroll" selectable="true">{{item.text}}</text>
         </view>
       </view>
     </block>
   </view>
-  <view class="page__bd page__bd_spacing">
-
     <view class="weui-footer">
       <view class="weui-footer__links">
         <navigator url="" class="weui-footer__link">底部链接</navigator>
       </view>
       <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
     </view>
-  </view>
 </view>

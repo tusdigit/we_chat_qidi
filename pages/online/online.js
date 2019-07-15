@@ -157,7 +157,8 @@ Page({
   data: {
     showIndex: 0,
     teacher_name: "王老师",
-    teacher_skill: "高数",
+    teacher_skill: "高数B1",
+    msg_items: "8",
     stu_name: "张渊",
     order_time: "2019/5/12",
     question: "泰勒公式",

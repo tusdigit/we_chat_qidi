@@ -18,10 +18,6 @@ var idinfolist = [{
   {
     "code": "年龄",
     "text": '30'
-  },
-  {
-    "code": "等等",
-    "text": ''
   }
 ]
 Page({

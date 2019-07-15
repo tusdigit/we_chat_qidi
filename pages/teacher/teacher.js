@@ -25,10 +25,8 @@ Page({
   /// 长按
   longTap: function (e) {
     console.log("long tap")
-    wx.showModal({
-      title: '提示',
-      content: '修改教师信息',
-      showCancel: false
+    this.setData({
+      showModal: true
     })
   },
 
@@ -82,6 +80,71 @@ Page({
   },
 
 
+
+  /**
+   
+  * 弹窗
+   
+  */
+
+  /**
+   
+  * 弹出框蒙层截断touchmove事件
+   
+  */
+
+  preventTouchMove: function () {
+
+  },
+
+  /**
+   
+  * 隐藏模态对话框
+   
+  */
+
+  hideModal: function () {
+
+    this.setData({
+
+      showModal: false
+
+    });
+
+  },
+
+  /**
+   
+  * 对话框取消按钮点击事件
+   
+  */
+
+  onCancel: function () {
+
+    this.hideModal();
+
+  },
+
+  /**
+   
+  * 对话框确认按钮点击事件
+   
+  */
+
+  onConfirm: function () {
+
+    wx.showToast({
+
+      title: '提交成功',
+
+      icon: 'success',
+
+      duration: 2000
+
+    })
+
+    this.hideModal();
+  },
   /**
      * 折叠面板
      */

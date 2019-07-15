@@ -1,8 +1,9 @@
 /* pages/teacher_msg/teacher_msg.wxss */
 .head {
+  width: 320px;
+  height: 200px;
   display: flex;
   flex-direction: column;
-  padding: 30px;
 }
 
 .title {
@@ -17,6 +18,7 @@
 .table {
   border: 2px solid darkgray;
   width: 100%;
+  height: 1000px;
   margin-top: 1rem;
   margin-right: 1rem;
   margin-left: 1rem;
@@ -30,17 +32,8 @@
   align-items: center;
 }
 
-.td {
-  width: 20%;
-  justify-content: center;
-  display: flex;
-  text-align: center;
-  border-right: 2px solid #ddd;
-  height: 100%;
-}
-
 .td-1 {
-  width: 19%;
+  width: 30%;
   justify-content: center;
   display: flex;
   text-align: center;
@@ -49,9 +42,8 @@
 }
 
 .td-2 {
-  width: 80%;
+  width: 70%;
   justify-content: center;
-  border-right: 2px solid #ddd;
   text-align: left;
   height: 100%;
   max-width: 100%;
@@ -71,7 +63,7 @@
 }
 
 .th {
-  width: 19%;
+  width: 30%;
   justify-content: center;
   color: #fff;
   display: flex;
@@ -81,7 +73,7 @@
 }
 
 .th-2 {
-  width: 80%;
+  width: 70%;
   justify-content: center;
   color: #fff;
   display: flex;
@@ -93,7 +85,9 @@
 
 .th-text {
   width: 80%;
+  margin-top: 10px;
   justify-content: center;
+  text-align: center;
   color: #000;
   display: block;
   height: 3rem;
@@ -103,7 +97,7 @@
 }
 
 .weui-footer {
-  margin-bottom: 50px;
+  margin-top:  100px;
 }
 
 .weui-footer_fixed-bottom {

@@ -6,8 +6,8 @@
           <image src='/images/teacher.jpg' style="width: 50px; height: 50px; display: block" />
         </view>
         <view class="weui-cell__bd">
-          <view>高老师</view>
-          <view style="font-size: 13px;color: #888888;">高数B1</view>
+          <view>{{teacher_name}}</view>
+          <view style="font-size: 13px;color: #888888;">{{teacher_skill}}</view>
         </view>
       </view>
     </view>
@@ -15,7 +15,7 @@
       <view class="weui-cell">
         <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
           <image src='/images/3.jpg' style="width: 50px; height: 50px; display: block" />
-          <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">8</view>
+          <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">{{msg_items}}</view>
         </view>
       </view>
     </view>
@@ -25,7 +25,7 @@
     <view class='help'>
       <view class='help_item'>
         <view class='title'>
-          <view class='title_1'>学生姓名：{{stu_name}}左滑、右滑</view>
+          <view class='title_1'>学生姓名：{{stu_name}}</view>
         </view>
       </view>
       <view class='help_item'>
@@ -35,7 +35,7 @@
       </view>
       <view class='help_item'>
         <view class='title' data-index='1' catchtap='panel'>
-          <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+          <view class='title_1'>预约主题：{{question}}</view>
         </view>
         <view class='detail' wx:if="{{showIndex == 1}}">{{question_detail}}</view>
       </view>
@@ -55,7 +55,7 @@
       </view>
       <view class='help_item'>
         <view class='title' data-index='2' catchtap='panel'>
-          <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+          <view class='title_1'>预约主题：{{question}}</view>
         </view>
         <view class='detail' wx:if="{{showIndex == 2}}">{{question_detail}}</view>
       </view>
@@ -75,7 +75,7 @@
       </view>
       <view class='help_item'>
         <view class='title' data-index='3' catchtap='panel'>
-          <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+          <view class='title_1'>预约主题：{{question}}</view>
         </view>
         <view class='detail' wx:if="{{showIndex == 3}}">{{question_detail}}</view>
       </view>
@@ -95,7 +95,7 @@
       </view>
       <view class='help_item'>
         <view class='title' data-index='4' catchtap='panel'>
-          <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+          <view class='title_1'>预约主题：{{question}}</view>
         </view>
         <view class='detail' wx:if="{{showIndex == 4}}">{{question_detail}}</view>
       </view>
@@ -115,7 +115,7 @@
       </view>
       <view class='help_item'>
         <view class='title' data-index='5' catchtap='panel'>
-          <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+          <view class='title_1'>预约主题：{{question}}</view>
         </view>
         <view class='detail' wx:if="{{showIndex == 5}}">{{question_detail}}</view>
       </view>
@@ -135,7 +135,7 @@
       </view>
       <view class='help_item'>
         <view class='title' data-index='6' catchtap='panel'>
-          <view class='title_1'>预约主题（点击展开）：{{question}}</view>
+          <view class='title_1'>预约主题：{{question}}</view>
         </view>
         <view class='detail' wx:if="{{showIndex == 6}}">{{question_detail}}</view>
       </view>
