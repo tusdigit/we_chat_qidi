@@ -12,25 +12,25 @@
 
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="所属部门"></input>
+      <input placeholder-class="input-holder" type='text' maxlength="10" bindinput="inputChange" class="input" placeholder="所属部门"></input>
 
     </view>
 
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="所属单位"></input>
+      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="inputChange" class="input" placeholder="所属单位"></input>
 
     </view>
 
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="学科"></input>
+      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="inputChange" class="input" placeholder="学科"></input>
 
     </view>
 
     <view class="modal-input">
 
-      <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="性别"></input>
+      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="inputChange" class="input" placeholder="性别"></input>
 
     </view>
     <view class="modal-input">
